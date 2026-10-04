@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#171214">
+  <meta name="description" content="A little love story made for Sonam Chokii.">
+  <title>For Sonam — Our Little Story</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="grain"></div>
+  <div class="progress"><span id="progressBar"></span></div>
+  <audio id="bgMusic" loop preload="auto" playsinline>
+    <source src="assets/tu-soch-na-sake.mp3" type="audio/mpeg">
+    <source src="assets/song.mp3" type="audio/mpeg">
+    <source src="assets/music.mp3" type="audio/mpeg">
+    <source src="assets/background.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Romantic floating layer -->
+  <div class="floaters" id="floaters" aria-hidden="true"></div>
+
+  <!-- Welcome gate: this tap is what lets the browser play music -->
+  <div class="gate" id="gate" role="dialog" aria-label="Open">
+    <div class="gate-glow"></div>
+    <div class="gate-inner">
+      <div class="gate-heart">♥</div>
+      <p class="eyebrow">made only for you</p>
+      <h1 class="gate-title">Sonam,<br><em>this one is yours.</em></h1>
+      <button class="gate-btn" id="gateBtn">Tap to open <span>♡</span></button>
+      <p class="gate-note">🎧 best with sound on</p>
+    </div>
+  </div>
+
+  <button class="sound-toggle" id="soundToggle" aria-label="Music on/off"><b id="soundIcon">♪</b> <span id="soundText">music</span></button>
+
+  <main>
+    <section class="hero section-dark" id="start">
+      <div class="hero-media">
+        <img src="assets/sonam-casual-selfie.jpg" alt="Sonam outdoors">
+        <div class="hero-vignette"></div>
+      </div>
+      <div class="hero-copy reveal">
+        <p class="eyebrow">just a little corner of us</p>
+        <h1>For you,<br><em>my Aloo.</em></h1>
+        <p class="hero-sub">Not a perfect story. Just some of my favourite little pieces of you.</p>
+        <a class="pill" href="#begin">Start our story <span>♡</span></a>
+      </div>
+      <div class="scroll-hint">scroll gently ↓</div>
+    </section>
+
+    <section class="intro section-light" id="begin">
+      <div class="narrow reveal">
+        <p class="eyebrow">chapter 01</p>
+        <h2>Somewhere along the way…</h2>
+        <p class="lead">There wasn't one particular moment. It was probably all the little ones.</p>
+      </div>
+      <div class="single-photo reveal">
+        <img src="assets/sonam-black-jersey.jpg" alt="Sonam sitting outdoors">
+        <span class="image-note">just you, being you.</span>
+      </div>
+    </section>
+
+    <section class="split section-cream">
+      <div class="split-copy reveal">
+        <p class="eyebrow">the little things</p>
+        <h2>Things I notice.</h2>
+        <div class="little-list">
+          <span>Your smile.</span>
+          <span>Your little expressions.</span>
+          <span>The way you talk.</span>
+          <span>The way you make me smile at my phone.</span>
+          <span>The way I still enjoy teasing you just to see your reaction.</span>
+        </div>
+      </div>
+      <div class="portrait-card reveal">
+        <img src="assets/sonam-sweater.jpg" alt="Sonam smiling outdoors">
+        <p>And then there were moments like this…</p>
+      </div>
+    </section>
+
+    <section class="editorial section-dark">
+      <div class="editorial-image reveal">
+        <img src="assets/sonam-white-sari-collage.jpg" alt="Sonam in a white sari">
+      </div>
+      <div class="editorial-copy reveal">
+        <p class="eyebrow">another version of you</p>
+        <h2>Okay… this one deserves its own moment.</h2>
+        <p>Some pictures don't need a long explanation.</p>
+      </div>
+    </section>
+
+    <section class="sunset" id="sunset">
+      <img src="assets/first-sunset.jpg" alt="Sunset — our first sunset together" class="sunset-img">
+      <div class="sunset-overlay"></div>
+      <div class="sunset-copy reveal">
+        <p class="eyebrow">a memory I kept</p>
+        <h2>Our first sunset.</h2>
+        <p class="sequence">
+          <span>I remember this one.</span>
+          <span>Funny how a normal evening can become a memory you keep.</span>
+          <span>Maybe it was never really about the sunset.</span>
+          <strong>Maybe it was about who I was standing beside.</strong>
+        </p>
+      </div>
+    </section>
+
+    <section class="playful section-light">
+      <div class="narrow reveal">
+        <p class="eyebrow">chapter 02</p>
+        <h2>Things I blame you for…</h2>
+        <p class="lead">A completely reasonable list, obviously.</p>
+      </div>
+      <div class="play-grid">
+        <article class="polaroid reveal">
+          <img src="assets/sonam-blue-outfit.jpg" alt="Sonam in blue">
+          <p>Being unnecessarily cute.</p>
+        </article>
+        <article class="polaroid tilt reveal">
+          <img src="assets/sonam-dog.jpg" alt="Sonam with a dog">
+          <p>Okay, I admit it… you and that little dog are both ridiculously cute.</p>
+        </article>
+        <article class="polaroid reveal">
+          <img src="assets/sonam-garden.jpg" alt="Sonam in a garden">
+          <p>Making ordinary moments worth remembering.</p>
+        </article>
+      </div>
+    </section>
+
+
+    <section class="memory-room section-light" id="memoryRoom">
+      <div class="narrow reveal">
+        <p class="eyebrow">a little game</p>
+        <h2>Tap a memory.</h2>
+        <p class="lead">I hid a few things I'd want you to know.</p>
+      </div>
+      <div class="memory-cards">
+        <button class="memory-card reveal" data-memory="sunset">
+          <span class="card-icon">☼</span>
+          <strong>The sunset</strong>
+          <small>tap to open</small>
+        </button>
+        <button class="memory-card reveal" data-memory="star">
+          <span class="card-icon">✦</span>
+          <strong>The silly one</strong>
+          <small>tap to open</small>
+        </button>
+        <button class="memory-card reveal" data-memory="love">
+          <span class="card-icon">♡</span>
+          <strong>The honest one</strong>
+          <small>tap to open</small>
+        </button>
+      </div>
+      <div class="memory-modal" id="memoryModal" aria-hidden="true">
+        <div class="memory-modal-inner">
+          <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+          <p class="eyebrow" id="modalEyebrow"></p>
+          <h3 id="modalTitle"></h3>
+          <p id="modalText"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="video-section section-dark">
+      <div class="narrow reveal">
+        <p class="eyebrow">moving memories</p>
+        <h2>Some moments deserve another replay.</h2>
+      </div>
+      <div class="video-frame reveal">
+        <video controls playsinline preload="metadata" poster="assets/sonam-red-outfit.jpg">
+          <source src="assets/memory-video-1.mp4" type="video/mp4">
+        </video>
+        <p>Some moments feel like little scenes from a movie.</p>
+      </div>
+      <div class="video-frame small-video reveal">
+        <video controls playsinline preload="metadata" poster="assets/sonam-sweater.jpg">
+          <source src="assets/memory-video-2.mp4" type="video/mp4">
+        </video>
+        <p>Yeah… this is exactly the kind of thing I'm talking about.</p>
+      </div>
+    </section>
+
+    <section class="gallery section-cream">
+      <div class="gallery-heading reveal">
+        <p class="eyebrow">chapter 03</p>
+        <h2>Just a few versions of you.</h2>
+      </div>
+      <div class="gallery-grid">
+        <figure class="g tall reveal"><img src="assets/sonam-walkway.jpg" alt="Sonam walking outdoors"><figcaption>Some moments don't need an explanation.</figcaption></figure>
+        <figure class="g reveal"><img src="assets/sonam-red-outfit.jpg" alt="Sonam in a red traditional outfit"><figcaption>A little bit of beautiful.</figcaption></figure>
+        <figure class="g wide reveal"><img src="assets/sonam-bench.jpg" alt="Sonam sitting outdoors"><figcaption>Quiet moments.</figcaption></figure>
+        <figure class="g reveal"><img src="assets/sonam-blue-outfit.jpg" alt="Sonam in blue traditional clothing"><figcaption>Every version of you has my attention.</figcaption></figure>
+      </div>
+    </section>
+
+
+    <section class="notes section-cream">
+      <div class="narrow reveal">
+        <p class="eyebrow">three little truths</p>
+        <h2>Pick one.</h2>
+      </div>
+      <div class="note-buttons">
+        <button class="note-btn reveal" data-note="want">If you asked what I want…</button>
+        <button class="note-btn reveal" data-note="flaws">If you asked what I love…</button>
+        <button class="note-btn reveal" data-note="promise">If you asked what I promise…</button>
+      </div>
+      <div class="note-display" id="noteDisplay">
+        <p>Choose a note above.</p>
+      </div>
+    </section>
+
+    <section class="letter section-dark">
+      <div class="letter-wrap reveal">
+        <p class="eyebrow">the part I don't say enough</p>
+        <h2>For Sonam.</h2>
+        <div class="letter">
+          <p>My Aloo, if you ever ask me what I want, the answer is honestly very simple: <strong>you.</strong> I don't want some perfect version of you. I want every version of you — the happy one, the quiet one, the stubborn one, the overthinking one, the silly one, and even the versions you think are your flaws.</p>
+          <p>I want to love you the way someone loves a person in all their seasons — not only when everything is easy, but when you're tired, annoyed, messy, confused or simply having a bad day. I would never ask you to hide the parts of yourself you don't like. I'd rather learn them, understand them, and love those parts too.</p>
+          <p>And I mean this, my Cutiepie: I never want to be the reason you are afraid to be yourself. I never want to hurt you. If I ever hurt you by mistake, then slap me, sit me down and explain it to me properly — I'll deserve the lecture. I want us to learn each other, not wound each other.</p>
+          <p>I want the random calls, the stupid jokes, the teasing, the little fights that end in us laughing again, the ordinary days, the celebrations, the quiet evenings, and all the versions of us that we haven't met yet.</p>
+          <p>Maybe that's what I love most: I don't just want a moment with you. <strong>I want you — and all the tomorrows that come with you.</strong></p>
+        </div>
+      </div>
+      <div class="letter-photo reveal">
+        <img src="assets/sonam-white-sari.jpg" alt="Sonam in a white sari">
+      </div>
+    </section>
+
+
+    <section class="tangerine section-dark">
+      <div class="tangerine-image reveal">
+        <img src="assets/sonam-walkway.jpg" alt="Sonam outdoors">
+      </div>
+      <div class="tangerine-copy reveal">
+        <p class="eyebrow">for the movie you love</p>
+        <h2>When life gives you tangerines…</h2>
+        <p class="movie-line">I want to love you through every season — the beautiful ones, the difficult ones, and all the ordinary ones in between.</p>
+        <p>Not just the version of you that smiles for pictures. Every version. Even the flaws you wish you could hide. I'd still want to hold them gently, understand them, and kiss them better.</p>
+      </div>
+    </section>
+
+    <section class="star-story section-light">
+      <div class="star-image reveal">
+        <img src="assets/star-cloth-inside-joke.jpg" alt="The handmade star-shaped cloth">
+      </div>
+      <div class="star-copy reveal">
+        <p class="eyebrow">okay, this needs an explanation</p>
+        <h2>Remember this?</h2>
+        <p>I made this for you just for fun.</p>
+        <p>But I always told you…</p>
+        <blockquote>“One day I'll buy you a proper one and make you wear it when you're my wife.”</blockquote>
+        <p class="soft">Funny how a silly little joke can end up feeling like a tiny promise.</p>
+      </div>
+    </section>
+
+    <section class="traditional section-dark">
+      <div class="traditional-copy reveal">
+        <p class="eyebrow">and then there is you</p>
+        <h2>In all your different little worlds.</h2>
+      </div>
+      <div class="traditional-images">
+        <img class="reveal" src="assets/sonam-walkway.jpg" alt="Sonam in a green landscape">
+        <img class="reveal" src="assets/sonam-red-outfit.jpg" alt="Sonam in traditional red clothing">
+        <img class="reveal" src="assets/sonam-bench.jpg" alt="Sonam sitting outdoors">
+      </div>
+    </section>
+
+    <section class="approach section-light">
+      <div class="narrow reveal">
+        <p class="eyebrow">almost there</p>
+        <h2>Maybe you already know.</h2>
+        <p class="lead">I keep finding little reasons to choose you.</p>
+        <div class="pause-line"></div>
+        <p class="lead">But I still want to ask you properly.</p>
+      </div>
+    </section>
+
+    <section class="proposal" id="proposal">
+      <img src="assets/sonam-white-sari.jpg" alt="Sonam" class="proposal-bg">
+      <div class="proposal-overlay"></div>
+      <div class="proposal-content reveal">
+        <p class="eyebrow">for you, Sonam</p>
+        <div class="proposal-sequence">
+          <span>Sonam…</span>
+          <span>My Aloo…</span>
+          <span>My Cutiepie…</span>
+          <span>My Wifey…</span>
+        </div>
+        <p class="proposal-text">I don't know what every tomorrow will look like.<br><br>But I know who I want beside me while I find out.</p>
+        <div class="you">You.</div>
+        <p class="final-question">I want you in the ordinary days too —<br>not just the beautiful ones.<br>So after all the little moments,<br>all the teasing,<br>all the memories,<br>and everything still waiting for us…</p>
+        <h2>Will you choose me too? <span>♡</span></h2>
+        <div class="yes-buttons">
+          <button class="yes-btn" data-yes>YES ❤️</button>
+          <button class="yes-btn secondary" data-yes>Absolutely YES 🥺</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="celebration" id="celebration" aria-hidden="true">
+      <div class="celebrate-inner">
+        <div class="sparkles" aria-hidden="true"></div>
+        <p class="eyebrow">then it's settled</p>
+        <h2>Let's make it our story.</h2>
+        <p>Chapter One was meeting you.</p>
+        <p>The rest is ours to write.</p>
+        <div class="celebrate-photo">
+          <img src="assets/sonam-casual-selfie.jpg" alt="Sonam">
+        </div>
+        <h3>I love you, Sonam. ❤️</h3>
+        <p class="tiny">— from the guy who got lucky enough to call you Aloo, Cutiepie and Wifey.</p>
+        <button class="replay" id="replay">↺ Replay our story</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
